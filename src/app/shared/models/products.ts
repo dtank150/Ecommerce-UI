@@ -1,4 +1,5 @@
 export interface Product {
+    [x: string | number]: string | number
     id: number
     name: string
     description: string
