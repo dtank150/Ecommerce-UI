@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { SectionHeaderComponent } from './section-header/section-header.component';
 import { BreadcrumbModule } from 'xng-breadcrumb';
+import { SharedModule } from '../shared/shared.module';
 
 
 
@@ -19,13 +20,14 @@ import { BreadcrumbModule } from 'xng-breadcrumb';
     CommonModule,
     RouterModule,
     BreadcrumbModule,
-    NgxSpinnerModule
+    NgxSpinnerModule,
+    SharedModule
   ],
   exports:[
     NavBarComponent,
     SectionHeaderComponent,
     NgxSpinnerModule
-    
+
   ]
 })
 export class CoreModule { }

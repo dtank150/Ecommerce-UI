@@ -2,9 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/shared/models/products';
 import { ShopService } from '../shop.service';
 import { ActivatedRoute } from '@angular/router';
-import { BreadcrumbService } from 'xng-breadcrumb';
+//import 'ngx-spinner/animations/timer.css';
 import { BasketService } from 'src/app/basket/basket.service';
 import { take } from 'rxjs';
+import { BreadcrumbService } from 'xng-breadcrumb';
+
 
 @Component({
   selector: 'app-product-details',
@@ -17,7 +19,7 @@ export class ProductDetailsComponent implements OnInit{
   quantity = 1;
   quantityInBasket = 0;
 
-  constructor(private shopService: ShopService, private activatedRoute: ActivatedRoute, private bcService: BreadcrumbService, private basketService:BasketService) {
+  constructor(private shopService: ShopService, private activatedRoute: ActivatedRoute, private bcService:BreadcrumbService, private basketService:BasketService) {
     this.bcService.set('@productDetails', ' ')
   }
 
